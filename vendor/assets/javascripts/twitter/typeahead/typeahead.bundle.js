@@ -143,7 +143,8 @@
         }
         function nonword(str) {
             str = _.toStr(str);
-            return str ? str.split(/\W+/) : [];
+            // return str ? str.split(/\W+/) : [];
+            return str ? str.split(/[^亜-熙ぁ-んァ-ヶ\w\.\;]+/) : [];
         }
         function getObjTokenizer(tokenizer) {
             return function setKey() {
